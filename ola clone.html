@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLA Clone</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 80px;
+            width: 115px;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li{
+            margin-left: 20px;
+        }
+
+        nav ul li a{
+            color: #fff;
+            font-size: 27px;
+            text-decoration: none;
+            margin: 18px;
+        }
+
+        .hero{
+            background: url('https://cdn.olaelectric.com/sites/evdp/pages/home/homepage_subsidy_banner_web_image_v2.webp') no-repeat center center/cover;
+            color: #fff;
+            height: 700px;
+            font-size: 25px;
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .services{
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .services-item {
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width:768px){
+            header{
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width:480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://logowik.com/content/uploads/images/ola-cabs.jpg" alt="Ola logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Ola</h1>
+        <p>Your Ride, your way.</p>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Best in Riding.</h3>
+            <p>We provide the best riding experience to our coustomers.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Battrey Life</h3>
+            <p>Providing you with the premium quality battries with 5years of Gaurentee and Warranty .</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ola. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

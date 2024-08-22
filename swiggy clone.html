@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+    
+        }
+
+        .navbar{
+                height: 115px;
+                width: 100%;
+                background-color:white;
+                display: flex;
+                align-items: center;
+                position: fixed;
+        }
+
+        .logo{
+            background: url('Swiggy logo.jpg');
+            height: 95px;
+            width: 95px;
+            background-size: cover;
+            margin-left: 100px;
+        }
+
+        .nav-logoname{
+               color: rgb(250 138 3);
+               font-weight: 900;
+        }
+
+        .company-name{
+             font-size: 32px;
+             font-family: Gilroy, sans-serif;
+             letter-spacing: 2px;
+        }
+
+        .briefcase-icon{
+            display: flex;
+            color: rgb(59 54 54);
+            margin-left: 230px;
+            font-size: 20px;
+        }
+
+        .icontext1{
+            color: rgb(59 54 54);
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .search-icon{
+            display: flex;
+            color:rgb(59 54 54) ;
+            margin-left:  34px;
+            font-size: 20px;
+        }
+
+        .icontext2{
+            color:rgb(59 54 54);
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .offers-icon{
+            display: flex;
+            color:rgb(59 54 54) ;
+            margin-left:  34px;
+            font-size: 20px;
+        }
+
+        .icontext3{
+            color:rgb(59 54 54);
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .help-icon{
+            display: flex;
+            color:rgb(59 54 54) ;
+            margin-left:  34px;
+            font-size: 20px;
+        }
+
+        .icontext4{
+            color:rgb(59 54 54);
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .signin-icon{
+            display: flex;
+            color:rgb(59 54 54) ;
+            margin-left:  34px;
+            font-size: 20px;
+        }
+
+        .icontext5{
+            color:rgb(59 54 54);
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .cart-icon{
+            display: flex;
+            color:rgb(59 54 54) ;
+            margin-left:  34px;
+            font-size: 20px;
+        }
+
+        .icontext6{
+            color:rgb(59 54 54);
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .highlight{
+              color:rgb(59 54 54) ;
+        }
+
+        .highlight:hover{
+            color: rgb(250 138 3) ;
+        }
+
+        .h-primary{
+            
+            font-weight: 750;
+            font-family: Gilroy, sans-serif;
+            line-height: 28px;
+            font-size: 30px;
+            color: rgba(2, 6, 12, 0.92);
+            letter-spacing: -0.4px;
+            margin-top: 1.5rem;
+            margin-left: 200px;
+        }
+
+        .container{
+            display: flex;
+            height: 300px;
+            justify-content: space-evenly;
+        }
+
+        .container img{
+            height: 180px;
+            width: 145px;
+            margin-top: 50px;
+
+        }
+
+
+        .options{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+            margin-bottom: 27px;
+        }
+
+        .curves{
+            border: 0.4px solid rgba(2, 6, 12, 0.75) ;
+            margin: 12px;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 15px ;
+            line-height: 18px;
+            letter-spacing: -0.3px;
+             color: rgba(2, 6, 12, 0.75);
+             font-weight: 400;
+        }
+
+        .option-2 {
+            display: flex;
+        }
+
+        .shop-section{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .shop-section img {
+            height: 250px;
+            width: 350px;
+            border-radius: 20px;
+        }
+
+        .text-1{
+            font-family: Gilroy_Bold, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: rgba(2, 6, 12, 0.92);
+            line-height: 24px;
+        }
+
+        .text-2{
+            font-family: Gilroy, sans-serif;
+            font-size: 18px;
+            line-height: 19px;
+            letter-spacing: -0.3px;
+            color: rgba(2, 6, 12, 0.92);
+            font-weight: 400;
+            padding: 6px;
+        }
+
+        .text-3,
+        .text-4 {
+            font-weight: 210;
+            font-size: 17px;
+            line-height: 19px;
+            letter-spacing: -0.3px;
+            color: rgba(2, 6, 12, 0.6);
+            font-family: Gilroy,sans-serif;
+            padding-bottom: 6px;
+        }
+
+        .shop-section i{
+             color: rgb(23, 173, 23);
+        }
+
+        .zoom{
+            margin-bottom: 30px;
+        }
+
+        .zoom:hover{
+                cursor: pointer;
+        }
+
+        .section-3{
+            margin-top: 80px;
+        }
+
+        .section-4{
+            margin-top: 80px;
+        }
+    
+        .tags{
+            display: flex;
+            flex-wrap: wrap;
+            font-family: Gilroy, sans-serif;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: -0.3px;
+            color: rgba(2, 6, 12, 0.75);
+            font-weight: 400;
+            justify-content: center;
+        }
+
+        .tagson{
+        
+            border: 1.5px solid rgba(2, 6, 12, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 16px;
+            width: 20%;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tagson-1{
+            border: 1.5px solid rgba(2, 6, 12, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 16px;
+            width: 400px;
+            height: auto;   
+            align-items: center; 
+            justify-content: center;
+
+        }
+    
+        footer{
+            margin-top: 15px;
+        }
+
+        .foot-panel1{
+                height: 104px;
+                background-color: rgba(111, 111, 117, 0.295);
+                /* position: absolute; */
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+        }
+
+        .foot-panel1 img{
+            height: 64px;
+            max-width: 208px;
+        
+        }
+
+        .lable-class{
+            font-family: Gilroy, sans-serif;
+            font-size: 28px;
+            line-height: 32px;
+            letter-spacing: -0.6px;
+            color: rgb(8 8 8 / 90%);
+            font-weight: 800;
+        }
+
+        .lable img{
+              padding: 10px;
+        }
+
+        .foot-panel2{
+               width: 100%;
+               height: 500px;
+               background-color: rgb(2, 6, 12);
+               color: white;
+               display: flex;
+               justify-content: space-evenly;
+        }
+
+        ul{
+            margin-top: 60px;
+        }
+
+        ul a{
+            display: block;
+            font-family: Gilroy, sans-serif;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: -0.3px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 180;
+            margin-top: 17px;
+        }
+
+        ul a:hover{
+              cursor: pointer;
+        }
+
+        ul p{
+            font-family: Gilroy_Bold, sans-serif;
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: -0.3px;
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 700;
+        }
+
+        .swiggy{
+            display: flex;
+            margin-top: 60px;
+        }
+
+        .swiggy img{
+            height: 40px;
+            width: 40px;
+        }
+
+        .swiggy h1{
+            font-family: Gilroy, sans-serif;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -0.4px;
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 800;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <div class="nav-logo">
+        <div class="logo"></div>
+        </div>
+
+        <div class="nav-logoname">
+            <p class="company-name">SWIGGY</p>
+        </div>
+
+        <div class="briefcase-icon highlight">
+            <i class="fa-solid fa-briefcase"></i>
+            <p class="icontext1 highlight">Swiggy Corporate</p>
+        </div>
+
+        
+        <div class="search-icon highlight">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p class="icontext2 highlight">Search</p>
+        </div>
+
+        <div class="offers-icon highlight">
+            <i class="fa-solid fa-percent"></i>
+            <p class="icontext3 highlight">Offers</p>
+        </div>
+
+        <div class="help-icon highlight">
+            <i class="fa-solid fa-life-ring"></i>
+            <p class="icontext4 highlight">Help</p>
+        </div>
+
+        <div class="signin-icon highlight">
+            <i class="fa-regular fa-user"></i>
+            <p class="icontext5 highlight">Sign In</p>
+        </div>
+
+        <div class="cart-icon highlight">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p class="icontext6 highlight">Cart</p>
+        </div>
+    </div>
+    </header>
+    <hr>
+
+    <section>
+    <div class="hero-section">
+        <h1 class="h-primary">What's on your mind?</h1>
+        <div class="container">
+            <div class="box1">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_burger.png" alt="">
+            </div>
+
+            <div class="box2">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png" alt="">
+            </div>
+
+            <div class="box3">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_North%20Indian.png" alt="">
+            </div>
+
+            <div class="box4">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Chinese.png" alt="">
+            </div>
+
+            <div class="box5">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="">
+            </div>
+
+            <div class="box6">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Salad.png" alt="">
+            </div>
+
+            <div class="box7">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Shake.png" alt="">
+            </div>
+        </div>
+    </div></section>
+    <hr>
+
+    <section>
+    <div class="section-2">
+        <h1 class="h-primary"> Restaurants with online food delivery in Ahemdabad</h1>
+        <div class="options">
+            <div class="option-1 curves">
+                <p>Filters</p>
+            </div>
+
+            <div class="option-2 curves">
+                <p>Sort By</p>
+                <i class="fa-solid fa-sort-down"></i>
+            </div>
+
+            <div class="option-3 curves">
+                <p>Fast Delivery</p>
+            </div>
+
+            <div class="option-4 curves">
+                <p>New On Swiggy</p>
+            </div>
+
+            <div class="option-5 curves">
+                <p>Pure Veg</p>
+            </div>
+
+            <div class="option-6 curves">
+                <p>Offers</p>
+            </div>
+
+            <div class="option-7 curves">
+                <p>Rs. 300-Rs. 600</p>
+            </div>
+
+            <div class="option-8 curves">
+                <p>Less than Rs. 300</p>
+            </div>
+
+        </div>
+
+        <div class="shop-section">
+            <div class="card zoom">
+                
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/49845b494b1e637209b7bd1c7ca184ad" alt="">
+                <p class="text-1">Havmor Havfunn Ice Cream </p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.7_25-30 mins </p>
+                <p class="text-3">Ice Creams, Ice Cream Cakes ,..</p>
+                <p class="text-4">Shahibag</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/fedaee6f-c5e9-4f19-8188-93627e6d6776_70279.JPG" alt="">
+                <p class="text-1">McDonald's</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.4_30-35 mins </p>
+                <p class="text-3">Burgers,Bevrages,Cafe,..</p>
+                <p class="text-4">Kankaria</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/4/4fe8d129-44fd-469e-9eda-a1416a6dffcd_40831.JPG" alt="">
+                <p class="text-1">Subway</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.5_25-30 mins </p>
+                <p class="text-3">Healthy Foods,Salads,Snacks,..</p>
+                <p class="text-4">Navrangpura</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/gdhhiq7vsj1qquasmumi" alt="">
+                <p class="text-1">La Pino'z Pizza</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.5_20-25 mins </p>
+                <p class="text-3">Pizza's,Pasta,Italian,Desserts,..</p>
+                <p class="text-4">Ashram Road</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/5116a385bac0548e06c33c08350fbf11" alt="">
+                <p class="text-1">The Belgian Waffle Co.</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.4_40-45 mins </p>
+                <p class="text-3">Waffle,Desserts,Ice Cream,..</p>
+                <p class="text-4">Shahibag</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sy8pkhfbtyzxwd2ywcd4" alt="">
+                <p class="text-1">Das Khaman</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.3_20-25 mins </p>
+                <p class="text-3">Snacks</p>
+                <p class="text-4">LalDarvaja</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/7f1361762df60168712f62b9387b08da" alt="">
+                <p class="text-1">The Fat Chef</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.3_25-30 mins </p>
+                <p class="text-3">Pastas,Fastfood,Snacks</p>
+                <p class="text-4">Naranpura</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/3/6c23f86c-8b57-47ae-9660-2ff0fad99fee_762592.JPG" alt="">
+                <p class="text-1">Starbucks Cofee</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.3_20-25 mins </p>
+                <p class="text-3">Snacks</p>
+                <p class="text-4">Majestic Law Garden</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/d3b3db238b6448c3f297c851e9d0b96b" alt="">
+                <p class="text-1">Taco Bell</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.3_20-25 mins </p>
+                <p class="text-3">Maxican,FastFoods,Snacks,..</p>
+                <p class="text-4">Ellis Bridge</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/fynz2fjutlvrhkuupyme" alt="">
+                <p class="text-1">MoMo King</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.7_40-45 mins </p>
+                <p class="text-3">Chinese</p>
+                <p class="text-4">Maninagar</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vybruyowkeibkcdoyyqn" alt="">
+                <p class="text-1">Mr. Sandwitch</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.5_40-45 mins </p>
+                <p class="text-3">Pizzas,Pastas,Desserts</p>
+                <p class="text-4">Satelite</p>
+            </div>
+
+            <div class="card zoom">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/6a73c3e1fdcf1e2860a25d757f596c0d" alt="">
+                <p class="text-1">Jugadi's Spot</p>
+                <p class="text-2"><i class="fa-solid fa-star"></i> 4.3_20-25 mins </p>
+                <p class="text-3">Mahrastian</p>
+                <p class="text-4">Navrangpura</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <hr>
+
+    <section>
+        <div class="section-3">
+            <h1 class="h-primary">Best Cuisines Near Me</h1>
+            <div class="tags">
+                <p class="tagson">Chinese Restaurant Near Me</p>
+                <p class="tagson">South Indian Restaurant Near Me</p>
+                <p class="tagson">Korean Restaurant Near Me</p>
+                <p class="tagson">North Indian Restaurant Near Me</p>
+                <p class="tagson">Seafood Restaurant Near Me</p>
+                <p class="tagson">Indian Restaurant Near Me</p>
+                <p class="tagson">Bengali Restaurant Near Me</p>
+                <p class="tagson">Andhara Restaurant Near Me</p>
+                <p class="tagson">Punjabi Restaurant Near Me</p>
+                <p class="tagson">Italian Restaurant Near Me</p>
+                <p class="tagson">Maxican Restaurants Near me</p>
+                <p class="tagson">Show More</p>
+            </div>
+        </div>
+
+        <div class="section-4">
+            <h1 class="h-primary">Explore Every Restaurant near Me</h1>
+            <div class="tags">
+                <p class="tagson-1">Explore Restaurants Near me</p>
+                <p class="tagson-1">Explore Top Rated Restaurants Near Me</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="foot-panel1">
+            <div class="lable-class">
+            <p class="lable">For better experience,download</p>
+            <p class="lable">the Swiggy app now</p>
+            </div>
+
+            <div class="lable">
+            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png" alt="">
+            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/app_store.png" alt="">
+            </div>
+        </div>
+
+        <div class="foot-panel2">
+            <div class="table1">
+                <div class="swiggy">
+                    <img src="data:image/png;base64,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" alt="">
+
+                    <h1>Swiggy</h1>
+                </div>
+                <p>&copy; 2024 Bundl Technologies</p>
+                <p>Pvt. Ltd</p>
+            </div>
+
+            <div class="table2">
+            <ul>
+                <p>Company</p>
+                <a>About</a>
+                <a>Careers</a>
+                <a>Team</a>
+                <a>Swiggy One</a>
+                <a>Swiggy Instamart</a>
+                <a>Swiggy Geenie</a>
+            </ul>
+        </div>
+
+        <div class="table3">
+            <ul>
+                <p>Contact Us</p>
+                <a>Help & Support</a>
+                <a>Partner With Us</a>
+                <a>Ride With Us</a>
+            </ul>
+
+            <ul>
+                <p>Legal</p>
+                <a>Terms & Conditions</a>
+                <a>Cookie Policy</a>
+                <a>Privacy Policy</a>
+                <a>Investor Relations</a>
+            </ul>
+        </div>
+
+        <div class="table4">
+            <ul>
+                <p>We Deliver To:</p>
+                <a>Hydrabad</a>
+                <a>Gurgaon</a>
+                <a>Banglore</a>
+                <a>Mumbai</a>
+                <a>Pune</a>
+                <a>Delhi</a>
+            </ul>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
