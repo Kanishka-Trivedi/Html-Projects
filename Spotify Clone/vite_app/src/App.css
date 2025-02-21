@@ -1,0 +1,158 @@
+.main{
+  display: flex;
+}
+
+.left{
+  width: 300px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  height: 100vh;
+  padding-top: 24px;
+  padding-bottom: 30px;
+  top: 0px;
+}
+
+.left > img {
+  height: 40px;
+  width: 155px;
+  margin-left: 30px;
+}
+
+.left > p {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 9px;
+  margin-top: 30px;
+}
+
+.left > p img{
+  height: 25px;
+  width: 25px;
+  margin-left: 30px;
+}
+
+.first{
+  margin-bottom: 27px;
+  margin-top: 27px;
+}
+
+.first > p img {
+  height: 25px;
+  width: 25px;
+}
+
+.first > p {
+  margin: 10px;
+  margin-left: 30px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.second{
+  margin-bottom: 27px;
+  margin-top: 35px;
+}
+
+.second > p {
+  margin: 10px;
+  margin-left: 30px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.second > p img {
+  height: 25px;
+  width: 25px;
+}
+
+.third{
+  margin-top: 40px;
+}
+
+.third > p {
+  margin: 10px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+.yu{
+  height: 38px;
+  margin-left: 40px;
+  margin-top: 22px;
+}
+
+.yt{
+  margin-left: 850px;
+  height: 38px;
+  margin-top: 22px;
+}
+
+.section1 > h1 {
+  font-size: 35px;
+  margin-left: 40px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.box1{
+  display: flex;
+  background-color: #413e3e;
+  height: 80px;
+  width: 280px;
+  margin: 7px;
+  border-radius: 6px;
+  justify-content: left;
+}
+
+.box1 > img {
+  height: 80px;
+  width: 90px;
+}
+
+.box1 > p {
+  width: 150px;
+  height: 90px;
+  text-align: center;
+}
+
+.con1{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+
+.scrol{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section2{
+  margin-left: 40px;
+}
+
+.box2{
+  padding: 10px;
+  height: 220px;
+  width: 165px;
+  background-color: #2f2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box2 > img {
+  height: 170px;
+  width: 160px;
+}
+
+.box2 > p {
+  font-size: 18px;
+}
